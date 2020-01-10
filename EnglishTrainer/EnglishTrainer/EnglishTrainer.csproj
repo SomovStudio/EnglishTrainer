@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{08CD6D45-AD8E-459D-8F3D-23FADD4A0114}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EnglishTrainer</RootNamespace>
+    <AssemblyName>EnglishTrainer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>img\icon1.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.ADOX">
+      <HintPath>lib\Interop.ADOX.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.12.0.1.net20\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\AboutForm.cs" />
+    <Compile Include="Client\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\AdjectiveForm.cs" />
+    <Compile Include="Client\Catalogs\AdjectiveForm.Designer.cs">
+      <DependentUpon>AdjectiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\AdverbForm.cs" />
+    <Compile Include="Client\Catalogs\AdverbForm.Designer.cs">
+      <DependentUpon>AdverbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\ArticlesForm.cs" />
+    <Compile Include="Client\Catalogs\ArticlesForm.Designer.cs">
+      <DependentUpon>ArticlesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\ConditionsForm.cs" />
+    <Compile Include="Client\Catalogs\ConditionsForm.Designer.cs">
+      <DependentUpon>ConditionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\EditCatalogsForm.cs" />
+    <Compile Include="Client\Catalogs\EditCatalogsForm.Designer.cs">
+      <DependentUpon>EditCatalogsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\InterjectionsForm.cs" />
+    <Compile Include="Client\Catalogs\InterjectionsForm.Designer.cs">
+      <DependentUpon>InterjectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\IntroWordsForm.cs" />
+    <Compile Include="Client\Catalogs\IntroWordsForm.Designer.cs">
+      <DependentUpon>IntroWordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\IrregularVerbsForm.cs" />
+    <Compile Include="Client\Catalogs\IrregularVerbsForm.Designer.cs">
+      <DependentUpon>IrregularVerbsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\ModalVerbsForm.cs" />
+    <Compile Include="Client\Catalogs\ModalVerbsForm.Designer.cs">
+      <DependentUpon>ModalVerbsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\ModalWordsForm.cs" />
+    <Compile Include="Client\Catalogs\ModalWordsForm.Designer.cs">
+      <DependentUpon>ModalWordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\NounsForm.cs" />
+    <Compile Include="Client\Catalogs\NounsForm.Designer.cs">
+      <DependentUpon>NounsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\NumeralForm.cs" />
+    <Compile Include="Client\Catalogs\NumeralForm.Designer.cs">
+      <DependentUpon>NumeralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\ParticlesForm.cs" />
+    <Compile Include="Client\Catalogs\ParticlesForm.Designer.cs">
+      <DependentUpon>ParticlesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\PrepositionForm.cs" />
+    <Compile Include="Client\Catalogs\PrepositionForm.Designer.cs">
+      <DependentUpon>PrepositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\PronounsForm.cs" />
+    <Compile Include="Client\Catalogs\PronounsForm.Designer.cs">
+      <DependentUpon>PronounsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\RegularVerbsForm.cs" />
+    <Compile Include="Client\Catalogs\RegularVerbsForm.Designer.cs">
+      <DependentUpon>RegularVerbsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\UnionForm.cs" />
+    <Compile Include="Client\Catalogs\UnionForm.Designer.cs">
+      <DependentUpon>UnionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Catalogs\VocabularyForm.cs" />
+    <Compile Include="Client\Catalogs\VocabularyForm.Designer.cs">
+      <DependentUpon>VocabularyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\FormClient.cs" />
+    <Compile Include="Client\FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\AnswersTestsForm.cs" />
+    <Compile Include="Client\PracticeTests\AnswersTestsForm.Designer.cs">
+      <DependentUpon>AnswersTestsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\PracticeFileEditForm.cs" />
+    <Compile Include="Client\PracticeTests\PracticeFileEditForm.Designer.cs">
+      <DependentUpon>PracticeFileEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\PracticeFileForm.cs" />
+    <Compile Include="Client\PracticeTests\PracticeFileForm.Designer.cs">
+      <DependentUpon>PracticeFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\PracticeFolderForm.cs" />
+    <Compile Include="Client\PracticeTests\PracticeFolderForm.Designer.cs">
+      <DependentUpon>PracticeFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\PracticeForm.cs" />
+    <Compile Include="Client\PracticeTests\PracticeForm.Designer.cs">
+      <DependentUpon>PracticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\PracticeTests\TestForm.cs" />
+    <Compile Include="Client\PracticeTests\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\SettingsForm.cs" />
+    <Compile Include="Client\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\СonstructorTimes\Future.cs" />
+    <Compile Include="Client\СonstructorTimes\Future.Designer.cs">
+      <DependentUpon>Future.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\СonstructorTimes\FuturePast.cs" />
+    <Compile Include="Client\СonstructorTimes\FuturePast.Designer.cs">
+      <DependentUpon>FuturePast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\СonstructorTimes\Past.cs" />
+    <Compile Include="Client\СonstructorTimes\Past.Designer.cs">
+      <DependentUpon>Past.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\СonstructorTimes\Present.cs" />
+    <Compile Include="Client\СonstructorTimes\Present.Designer.cs">
+      <DependentUpon>Present.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CreateDatabaseMSAccess.cs" />
+    <Compile Include="Database\Local\OleDb.cs" />
+    <Compile Include="Database\Local\QueryOleDb.cs" />
+    <Compile Include="Database\VerificationDatabaseMSAccess.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Data\Constants.cs" />
+    <Compile Include="Data\Forms.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilits\Console.cs" />
+    <Compile Include="Utilits\IOFiles.cs" />
+    <Compile Include="Utilits\YandexTranslator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client" />
+    <Folder Include="Client\Catalogs" />
+    <Folder Include="Client\PracticeTests" />
+    <Folder Include="Client\СonstructorTimes" />
+    <Folder Include="Data" />
+    <Folder Include="Database" />
+    <Folder Include="Database\Local" />
+    <Folder Include="Utilits" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Client\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\AdjectiveForm.resx">
+      <DependentUpon>AdjectiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\AdverbForm.resx">
+      <DependentUpon>AdverbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\ArticlesForm.resx">
+      <DependentUpon>ArticlesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\ConditionsForm.resx">
+      <DependentUpon>ConditionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\EditCatalogsForm.resx">
+      <DependentUpon>EditCatalogsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\InterjectionsForm.resx">
+      <DependentUpon>InterjectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\IntroWordsForm.resx">
+      <DependentUpon>IntroWordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\IrregularVerbsForm.resx">
+      <DependentUpon>IrregularVerbsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\ModalVerbsForm.resx">
+      <DependentUpon>ModalVerbsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\ModalWordsForm.resx">
+      <DependentUpon>ModalWordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\NounsForm.resx">
+      <DependentUpon>NounsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\NumeralForm.resx">
+      <DependentUpon>NumeralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\ParticlesForm.resx">
+      <DependentUpon>ParticlesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\PrepositionForm.resx">
+      <DependentUpon>PrepositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\PronounsForm.resx">
+      <DependentUpon>PronounsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\RegularVerbsForm.resx">
+      <DependentUpon>RegularVerbsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\UnionForm.resx">
+      <DependentUpon>UnionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Catalogs\VocabularyForm.resx">
+      <DependentUpon>VocabularyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\AnswersTestsForm.resx">
+      <DependentUpon>AnswersTestsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\PracticeFileEditForm.resx">
+      <DependentUpon>PracticeFileEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\PracticeFileForm.resx">
+      <DependentUpon>PracticeFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\PracticeFolderForm.resx">
+      <DependentUpon>PracticeFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\PracticeForm.resx">
+      <DependentUpon>PracticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\PracticeTests\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\СonstructorTimes\Future.resx">
+      <DependentUpon>Future.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\СonstructorTimes\FuturePast.resx">
+      <DependentUpon>FuturePast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\СonstructorTimes\Past.resx">
+      <DependentUpon>Past.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\СonstructorTimes\Present.resx">
+      <DependentUpon>Present.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
